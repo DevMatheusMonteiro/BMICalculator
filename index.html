@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculadora de IMC</title>
+  </head>
+  <body>
+    <article class="error hide"></article>
+    <main>
+      <section class="calculateBMI">
+        <h1>Cálculo de IMC</h1>
+        <form>
+          <div class="input-wrapper">
+            <label for="weight">Peso (kg)</label>
+            <input type="text" name="weight" id="weight" placeholder="62,4" />
+          </div>
+          <div class="input-wrapper">
+            <label for="height">Altura (m)</label>
+            <input type="text" name="height" id="height" placeholder="1,65" />
+          </div>
+          <button id="calculateButton">
+            Calcular IMC
+            <img src="images/arrow.png" alt="Seta apontando para direita" />
+          </button>
+        </form>
+      </section>
+    </main>
+    <article class="BMIResult hide">
+      <div>
+        <img id="close" src="images/close.png" alt="X para fechar" />
+        <h2>Seu IMC é de 28</h2>
+      </div>
+    </article>
+
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+  --title: #0c3440;
+
+  --background-body: #040924;
+
+  --button-outline-input: #02799d;
+  --background-input: #dce2e9;
+  --border-input: rgba(73, 80, 87, 0.3);
+  --color-input: #212529;
+  --placeholder: #49505780;
+
+  --label: #00453a;
+
+  --background-error: #f03e3e;
+
+  --white: #fff;
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  height: 100vh;
+  background-color: var(--background-body);
+}
+
+h1,
+h2 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--title);
+}
+
+main {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  padding: 0 2%;
+}
+
+.calculateBMI {
+  display: grid;
+  gap: 3.2rem;
+  background-color: var(--white);
+  padding: 4.8rem 6.4rem 6.4rem;
+  border-radius: 0.6rem;
+  width: 100%;
+  max-width: 43.2rem;
+}
+
+.calculateBMI form {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.input-wrapper {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.input-wrapper label {
+  color: var(--label);
+  font-size: 1.4rem;
+}
+
+.input-wrapper input {
+  border-radius: 0.4rem;
+  border: 0.1rem solid var(--border-input);
+  height: 4.8rem;
+  width: 100%;
+  padding: 0 1.6rem;
+  background-color: var(--background-input);
+  color: var(--color-input);
+}
+
+.input-wrapper input::placeholder {
+  color: var(--placeholder);
+}
+
+.input-wrapper input:focus,
+#calculateButton:focus {
+  outline: 0.2rem solid var(--button-outline-input);
+}
+
+#calculateButton {
+  margin-top: calc(3.2rem - 1.6rem);
+  padding: 1.6rem;
+  border: 0;
+  border-radius: 0.4rem;
+  background-color: var(--button-outline-input);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out;
+}
+
+#calculateButton:hover {
+  background-color: #16b1e0;
+}
+
+.BMIResult {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 0 2%;
+  text-align: center;
+}
+
+.BMIResult > div {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--white);
+  padding: 4.8rem 6.4rem 6.4rem;
+  max-width: 36.8rem;
+  border-radius: 0.6rem;
+}
+
+#close {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  cursor: pointer;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(-100%);
+  }
+}
+.error {
+  position: fixed;
+  width: 100%;
+  background-color: var(--background-error);
+  color: var(--white);
+  padding: 0.8rem 0;
+  text-align: center;
+  font-weight: 700;
+  animation: move 1s;
+}
