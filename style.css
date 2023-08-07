@@ -148,6 +148,7 @@ main {
     transform: translateY(-100%);
   }
 }
+
 .error {
   position: fixed;
   width: 100%;
@@ -156,5 +157,5 @@ main {
   padding: 0.8rem 0;
   text-align: center;
   font-weight: 700;
-  animation: move 1s;
+  animation: move 1s ease-in;
 }
